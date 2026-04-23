@@ -21,3 +21,6 @@ dependencyResolutionManagement {
 
 rootProject.name = "BillingTestLib"
 include ':app'
+include ':billing-test-lib:annotation'
+include ':billing-test-lib:processor'
+include ':billing-test-lib:runtime'

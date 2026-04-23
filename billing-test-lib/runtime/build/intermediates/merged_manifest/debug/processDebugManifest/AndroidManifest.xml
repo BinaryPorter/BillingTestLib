@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.billing.test.runtime" >
+
+    <uses-sdk android:minSdkVersion="23" />
+
+    <queries>
+        <package android:name="com.google.android.apps.play.billingtestcompanion" />
+    </queries>
+
+    <application>
+        <activity
+            android:name="com.billing.test.runtime.ui.BillingTestCenterActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.BillingTestCenter" />
+    </application>
+
+</manifest>

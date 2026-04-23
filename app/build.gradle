@@ -1,6 +1,7 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
+    id("com.google.devtools.ksp")
 }
 
 android {
@@ -37,7 +38,14 @@ dependencies {
     implementation libs.androidx.core.ktx
     implementation libs.androidx.appcompat
     implementation libs.material
+    implementation libs.androidx.activity
+    implementation libs.androidx.constraintlayout
     testImplementation libs.junit
     androidTestImplementation libs.androidx.junit
     androidTestImplementation libs.androidx.espresso.core
+
+    // billing test lib (debug only)
+    implementation project(':billing-test-lib:annotation')
+    debugImplementation project(':billing-test-lib:runtime')
+    ksp project(':billing-test-lib:processor')
 }

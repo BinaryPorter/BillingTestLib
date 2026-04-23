@@ -1,0 +1,24 @@
+com.billing.test.runtime
+id btn_apply_country
+id btn_back
+id btn_play_billing_lab
+id btn_reset
+id country
+id divider_sku
+id layout_sku_preview
+id recycler_pages
+id recycler_quick_countries
+id recycler_sku
+id spinner_country
+id tv_category
+id tv_page_class
+id tv_page_name
+id tv_price
+id tv_sku_id
+id tv_type_name
+layout activity_billing_test_center
+layout item_billing_page
+layout item_page_category_header
+layout item_quick_country
+layout item_sku_info
+style Theme_BillingTestCenter

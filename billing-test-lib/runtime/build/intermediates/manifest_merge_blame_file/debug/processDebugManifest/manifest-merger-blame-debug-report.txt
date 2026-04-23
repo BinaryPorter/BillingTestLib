@@ -1,0 +1,28 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.billing.test.runtime" >
+4
+5    <uses-sdk android:minSdkVersion="23" />
+6
+7    <queries>
+7-->D:\Project\temp\BillingTestLib\billing-test-lib\runtime\src\main\AndroidManifest.xml:4:5-6:15
+8        <package android:name="com.google.android.apps.play.billingtestcompanion" />
+8-->D:\Project\temp\BillingTestLib\billing-test-lib\runtime\src\main\AndroidManifest.xml:5:9-85
+8-->D:\Project\temp\BillingTestLib\billing-test-lib\runtime\src\main\AndroidManifest.xml:5:18-82
+9    </queries>
+10
+11    <application>
+11-->D:\Project\temp\BillingTestLib\billing-test-lib\runtime\src\main\AndroidManifest.xml:8:5-14:19
+12        <activity
+12-->D:\Project\temp\BillingTestLib\billing-test-lib\runtime\src\main\AndroidManifest.xml:9:9-13:62
+13            android:name="com.billing.test.runtime.ui.BillingTestCenterActivity"
+13-->D:\Project\temp\BillingTestLib\billing-test-lib\runtime\src\main\AndroidManifest.xml:10:13-57
+14            android:exported="false"
+14-->D:\Project\temp\BillingTestLib\billing-test-lib\runtime\src\main\AndroidManifest.xml:11:13-37
+15            android:screenOrientation="portrait"
+15-->D:\Project\temp\BillingTestLib\billing-test-lib\runtime\src\main\AndroidManifest.xml:12:13-49
+16            android:theme="@style/Theme.BillingTestCenter" />
+16-->D:\Project\temp\BillingTestLib\billing-test-lib\runtime\src\main\AndroidManifest.xml:13:13-59
+17    </application>
+18
+19</manifest>
