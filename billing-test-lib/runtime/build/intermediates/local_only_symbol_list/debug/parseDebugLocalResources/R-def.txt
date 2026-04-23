@@ -1,5 +1,6 @@
 R_DEF: Internal format may change without notice
 local
+drawable bg_page_type_tag
 id btn_apply_country
 id btn_back
 id btn_play_billing_lab
@@ -14,6 +15,7 @@ id spinner_country
 id tv_category
 id tv_page_class
 id tv_page_name
+id tv_page_type
 id tv_price
 id tv_sku_id
 id tv_type_name
@@ -22,4 +24,5 @@ layout item_billing_page
 layout item_page_category_header
 layout item_quick_country
 layout item_sku_info
+style Theme.BillingDialogHost
 style Theme.BillingTestCenter

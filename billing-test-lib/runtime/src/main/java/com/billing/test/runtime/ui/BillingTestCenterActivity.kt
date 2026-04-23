@@ -10,6 +10,7 @@ import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.billing.test.annotation.BillingPageType
 import com.billing.test.annotation.BillingTestPageEntry
 import com.billing.test.runtime.BillingTest
 import com.billing.test.runtime.BillingTestPageRegistryProvider
@@ -234,7 +235,18 @@ class BillingTestCenterActivity : AppCompatActivity() {
             } else if (item is BillingTestPageEntry) {
                 val vh = holder as PageViewHolder
                 vh.tvName.text = item.name
-                vh.tvClass.text = item.activityClassName.substringAfterLast(".")
+                if (item.type == BillingPageType.DIALOG) {
+                    vh.tvType.visibility = View.VISIBLE
+                    vh.tvType.text = "Dialog"
+                } else {
+                    vh.tvType.visibility = View.GONE
+                }
+                if (item.activityClassName.isNotEmpty()) {
+                    vh.tvClass.visibility = View.VISIBLE
+                    vh.tvClass.text = item.activityClassName.substringAfterLast(".")
+                } else {
+                    vh.tvClass.visibility = View.GONE
+                }
                 vh.itemView.setOnClickListener { onPageClick(item) }
             }
         }
@@ -247,6 +259,7 @@ class BillingTestCenterActivity : AppCompatActivity() {
 
         class PageViewHolder(view: View) : RecyclerView.ViewHolder(view) {
             val tvName: TextView = view.findViewById(R.id.tv_page_name)
+            val tvType: TextView = view.findViewById(R.id.tv_page_type)
             val tvClass: TextView = view.findViewById(R.id.tv_page_class)
         }
     }

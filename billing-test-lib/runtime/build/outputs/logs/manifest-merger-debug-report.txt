@@ -1,7 +1,7 @@
 -- Merging decision tree log ---
 manifest
-ADDED from D:\Project\temp\BillingTestLib\billing-test-lib\runtime\src\main\AndroidManifest.xml:2:1-16:12
-INJECTED from D:\Project\temp\BillingTestLib\billing-test-lib\runtime\src\main\AndroidManifest.xml:2:1-16:12
+ADDED from D:\Project\temp\BillingTestLib\billing-test-lib\runtime\src\main\AndroidManifest.xml:2:1-20:12
+INJECTED from D:\Project\temp\BillingTestLib\billing-test-lib\runtime\src\main\AndroidManifest.xml:2:1-20:12
 	package
 		INJECTED from D:\Project\temp\BillingTestLib\billing-test-lib\runtime\src\main\AndroidManifest.xml
 	xmlns:android
@@ -13,7 +13,7 @@ ADDED from D:\Project\temp\BillingTestLib\billing-test-lib\runtime\src\main\Andr
 	android:name
 		ADDED from D:\Project\temp\BillingTestLib\billing-test-lib\runtime\src\main\AndroidManifest.xml:5:18-82
 application
-ADDED from D:\Project\temp\BillingTestLib\billing-test-lib\runtime\src\main\AndroidManifest.xml:8:5-14:19
+ADDED from D:\Project\temp\BillingTestLib\billing-test-lib\runtime\src\main\AndroidManifest.xml:8:5-18:19
 activity#com.billing.test.runtime.ui.BillingTestCenterActivity
 ADDED from D:\Project\temp\BillingTestLib\billing-test-lib\runtime\src\main\AndroidManifest.xml:9:9-13:62
 	android:screenOrientation
@@ -24,6 +24,14 @@ ADDED from D:\Project\temp\BillingTestLib\billing-test-lib\runtime\src\main\Andr
 		ADDED from D:\Project\temp\BillingTestLib\billing-test-lib\runtime\src\main\AndroidManifest.xml:13:13-59
 	android:name
 		ADDED from D:\Project\temp\BillingTestLib\billing-test-lib\runtime\src\main\AndroidManifest.xml:10:13-57
+activity#com.billing.test.runtime.ui.DialogHostActivity
+ADDED from D:\Project\temp\BillingTestLib\billing-test-lib\runtime\src\main\AndroidManifest.xml:14:9-17:62
+	android:exported
+		ADDED from D:\Project\temp\BillingTestLib\billing-test-lib\runtime\src\main\AndroidManifest.xml:16:13-37
+	android:theme
+		ADDED from D:\Project\temp\BillingTestLib\billing-test-lib\runtime\src\main\AndroidManifest.xml:17:13-59
+	android:name
+		ADDED from D:\Project\temp\BillingTestLib\billing-test-lib\runtime\src\main\AndroidManifest.xml:15:13-50
 uses-sdk
 INJECTED from D:\Project\temp\BillingTestLib\billing-test-lib\runtime\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from D:\Project\temp\BillingTestLib\billing-test-lib\runtime\src\main\AndroidManifest.xml

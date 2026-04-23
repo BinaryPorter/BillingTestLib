@@ -26,7 +26,7 @@ class BillingTestPageProcessor(
             val annotation = symbol.getAnnotationsByType(BillingTestPage::class).firstOrNull()
                 ?: continue
 
-            val activityClassName = symbol.qualifiedName?.asString() ?: continue
+            val className = symbol.qualifiedName?.asString() ?: continue
 
             val factoryClassName = if (annotation.intentFactory.isEmpty()) {
                 null
@@ -39,7 +39,8 @@ class BillingTestPageProcessor(
                     name = annotation.name,
                     category = annotation.category,
                     description = annotation.description,
-                    activityClassName = activityClassName,
+                    type = annotation.type.name,
+                    activityClassName = className,
                     intentFactoryClassName = factoryClassName
                 )
             )
@@ -60,7 +61,6 @@ class BillingTestPageProcessor(
         val implQualifiedName = "com.billing.test.generated.$implClassName"
         val dependencies = Dependencies(false, *originatingFiles.toTypedArray())
 
-        // Generate Kotlin source
         val file = codeGenerator.createNewFile(
             dependencies,
             "com.billing.test.generated",
@@ -70,6 +70,7 @@ class BillingTestPageProcessor(
         val writer = file.bufferedWriter()
         writer.appendLine("package com.billing.test.generated")
         writer.appendLine()
+        writer.appendLine("import com.billing.test.annotation.BillingPageType")
         writer.appendLine("import com.billing.test.annotation.BillingTestPageEntry")
         writer.appendLine("import com.billing.test.annotation.BillingTestPageRegistry")
         writer.appendLine()
@@ -83,6 +84,7 @@ class BillingTestPageProcessor(
             entries.forEachIndexed { index, entry ->
                 writer.appendLine("        BillingTestPageEntry(")
                 writer.appendLine("            name = \"${escapeKotlin(entry.name)}\",")
+                writer.appendLine("            type = BillingPageType.${entry.type},")
                 writer.appendLine("            category = \"${escapeKotlin(entry.category)}\",")
                 writer.appendLine("            description = \"${escapeKotlin(entry.description)}\",")
                 writer.appendLine("            activityClassName = \"${entry.activityClassName}\",")
@@ -104,7 +106,6 @@ class BillingTestPageProcessor(
         writer.appendLine("}")
         writer.close()
 
-        // Generate META-INF/services for ServiceLoader
         val servicesFile = codeGenerator.createNewFile(
             dependencies,
             "",
@@ -123,6 +124,7 @@ class BillingTestPageProcessor(
         val name: String,
         val category: String,
         val description: String,
+        val type: String,
         val activityClassName: String,
         val intentFactoryClassName: String?
     )

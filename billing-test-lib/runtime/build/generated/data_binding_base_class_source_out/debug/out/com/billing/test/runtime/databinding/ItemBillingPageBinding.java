@@ -25,11 +25,15 @@ public final class ItemBillingPageBinding implements ViewBinding {
   @NonNull
   public final TextView tvPageName;
 
+  @NonNull
+  public final TextView tvPageType;
+
   private ItemBillingPageBinding(@NonNull LinearLayout rootView, @NonNull TextView tvPageClass,
-      @NonNull TextView tvPageName) {
+      @NonNull TextView tvPageName, @NonNull TextView tvPageType) {
     this.rootView = rootView;
     this.tvPageClass = tvPageClass;
     this.tvPageName = tvPageName;
+    this.tvPageType = tvPageType;
   }
 
   @Override
@@ -71,7 +75,14 @@ public final class ItemBillingPageBinding implements ViewBinding {
         break missingId;
       }
 
-      return new ItemBillingPageBinding((LinearLayout) rootView, tvPageClass, tvPageName);
+      id = R.id.tv_page_type;
+      TextView tvPageType = ViewBindings.findChildViewById(rootView, id);
+      if (tvPageType == null) {
+        break missingId;
+      }
+
+      return new ItemBillingPageBinding((LinearLayout) rootView, tvPageClass, tvPageName,
+          tvPageType);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

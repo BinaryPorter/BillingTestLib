@@ -8,6 +8,7 @@ data class BillingTestPageEntry(
     val name: String,
     val category: String,
     val description: String,
-    val activityClassName: String,
+    val type: BillingPageType = BillingPageType.ACTIVITY,
+    val activityClassName: String = "",
     val intentFactoryClassName: String? = null
 )

@@ -12,7 +12,7 @@
 9    </queries>
 10
 11    <application>
-11-->D:\Project\temp\BillingTestLib\billing-test-lib\runtime\src\main\AndroidManifest.xml:8:5-14:19
+11-->D:\Project\temp\BillingTestLib\billing-test-lib\runtime\src\main\AndroidManifest.xml:8:5-18:19
 12        <activity
 12-->D:\Project\temp\BillingTestLib\billing-test-lib\runtime\src\main\AndroidManifest.xml:9:9-13:62
 13            android:name="com.billing.test.runtime.ui.BillingTestCenterActivity"
@@ -23,6 +23,14 @@
 15-->D:\Project\temp\BillingTestLib\billing-test-lib\runtime\src\main\AndroidManifest.xml:12:13-49
 16            android:theme="@style/Theme.BillingTestCenter" />
 16-->D:\Project\temp\BillingTestLib\billing-test-lib\runtime\src\main\AndroidManifest.xml:13:13-59
-17    </application>
-18
-19</manifest>
+17        <activity
+17-->D:\Project\temp\BillingTestLib\billing-test-lib\runtime\src\main\AndroidManifest.xml:14:9-17:62
+18            android:name="com.billing.test.runtime.ui.DialogHostActivity"
+18-->D:\Project\temp\BillingTestLib\billing-test-lib\runtime\src\main\AndroidManifest.xml:15:13-50
+19            android:exported="false"
+19-->D:\Project\temp\BillingTestLib\billing-test-lib\runtime\src\main\AndroidManifest.xml:16:13-37
+20            android:theme="@style/Theme.BillingDialogHost" />
+20-->D:\Project\temp\BillingTestLib\billing-test-lib\runtime\src\main\AndroidManifest.xml:17:13-59
+21    </application>
+22
+23</manifest>

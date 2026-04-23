@@ -11,6 +11,10 @@
             android:exported="false"
             android:screenOrientation="portrait"
             android:theme="@style/Theme.BillingTestCenter" />
+        <activity
+            android:name=".ui.DialogHostActivity"
+            android:exported="false"
+            android:theme="@style/Theme.BillingDialogHost" />
     </application>
 
 </manifest>
