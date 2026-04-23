@@ -1,5 +1,6 @@
 plugins {
     kotlin("jvm")
+    `maven-publish`
 }
 
 java {
@@ -9,4 +10,15 @@ java {
 
 kotlin {
     jvmToolchain(17)
+}
+
+publishing {
+    publications {
+        create<MavenPublication>("maven") {
+            from(components["java"])
+            groupId = project.property("LIBRARY_GROUP_ID") as String
+            artifactId = project.property("LIBRARY_ANNOTATION_ARTIFACT_ID") as String
+            version = project.property("LIBRARY_VERSION") as String
+        }
+    }
 }

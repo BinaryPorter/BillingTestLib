@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(cat settings.gradle)",
+      "Bash(cat settings.gradle.kts)",
+      "Bash(cat build.gradle)",
+      "Bash(cat build.gradle.kts)",
+      "Bash(cat billing-test-lib/build.gradle.kts)",
+      "Bash(ls billing-test-lib/build.gradle)",
+      "Bash(./gradlew :billing-test-lib:annotation:publishToMavenLocal :billing-test-lib:processor:publishToMavenLocal :billing-test-lib:runtime:publishToMavenLocal)"
+    ]
+  }
+}
